@@ -38,7 +38,9 @@ def get_hostconf_module(hostconf=None):
 
 @lru_cache()
 def get_host(name=None):
+    print(get_host_patterns)
     for host in get_host_patterns():
+        print(host.name, name)
         if host.name == name:
             return host
     raise NoReverseMatch("No host called '%s' exists" % name)

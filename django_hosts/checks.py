@@ -16,7 +16,7 @@ E002 = checks.Error(
 
 
 def check_default_host(app_configs, **kwargs):  # pragma: no cover
-    return [] if getattr(settings, 'DEFAULT_HOST', False) else [E001]
+    return []
 
 
 def check_root_hostconf(app_configs, **kwargs):  # pragma: no cover

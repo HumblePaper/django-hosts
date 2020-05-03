@@ -38,6 +38,7 @@ def get_hostconf_module(hostconf=None):
 
 @lru_cache()
 def get_host(name=None):
+
     # if name is None:
     #     try:
     #         name = settings.DEFAULT_HOST

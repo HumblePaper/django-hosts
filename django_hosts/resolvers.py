@@ -36,11 +36,6 @@ def get_hostconf_module(hostconf=None):
 
 @lru_cache()
 def get_host(name=None):
-    if name is None:
-        try:
-            name = settings.DEFAULT_HOST
-        except AttributeError:
-            raise ImproperlyConfigured("Missing DEFAULT_HOST setting")
     for host in get_host_patterns():
         if host.name == name:
             return host
